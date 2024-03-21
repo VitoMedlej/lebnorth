@@ -15,7 +15,6 @@ export const LangContext = createContext < any > ('en');
         children: React.ReactNode;
       }
       ) => {
-            const a = 421412;
         const [open,
             setOpen] = useState(false);
         const [cartOpen,
@@ -25,17 +24,17 @@ export const LangContext = createContext < any > ('en');
                 const [lang,
                     setLang] = useState('en');
                         // Load language from localStorage on component mount
-    useEffect(() => {
-        const savedLang = loadState('Vz124tf');
-        if (savedLang) {
-            setLang(savedLang);
-        }
-    }, []);
+    // useEffect(() => {
+    //     const savedLang = loadState('Vz124tf');
+    //     if (savedLang) {
+    //         setLang(savedLang);
+    //     }
+    // }, []);
 
     // Save language to localStorage whenever it changes
-    useEffect(() => {
-        saveState('Vz124tf', lang);
-    }, [lang]);
+    // useEffect(() => {
+    //     saveState('Vz124tf', lang);
+    // }, [lang]);
             return (
                 
                 <DrawerContext.Provider value={{open,setOpen}}>

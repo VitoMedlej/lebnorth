@@ -40,9 +40,9 @@ import totalCal from '@/Utils/totalCal';
 // }  
 export default function Review({setActiveStep}:{setActiveStep:any}) {
 
-  const products = loadState('l12oxio951209XJkgop15v')
+  const products = loadState('clartloclal51z')
  
-  const info = loadState('2VI1H2OI-FJ04BJZ2X')
+  const info = loadState('4jiinfo')
 
   const total = totalCal(products);
   if (!info) {

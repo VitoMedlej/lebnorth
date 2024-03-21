@@ -13,21 +13,10 @@ const HomeProductCollection = ({products} : {products:IProduct[] | never[]}) => 
            
            <Box className="flex justify-between col auto" sx={{px:1,pt:8,pb:4,maxWidth:'lg'}}>
 
-<Typography
-component={'h1'}
-    className='sectionTitle  center text-center box'
-    sx={{
- 
-    fontSize: {
-        xs: '2em',
-        sm: '3em'
-    },
-    padding:.5,
-    fontWeight: '900'
-}}>
- Diamond Painting is easy and fun!
-</Typography>
-<Typography
+           <Typography className='center  clr text-center' sx={{fontWeight:600,fontSize:'2em'}}>
+           Top Featured Products
+        </Typography>
+{/* <Typography
 component={'p'}
     className='sectionTitle  center text-center box'
     sx={{
@@ -40,7 +29,7 @@ component={'p'}
     fontWeight: '300'
 }}>
 Relax and unwind as you seamlessly create your own stunning diamond art.
-</Typography>
+</Typography> */}
 
 <Btn 
 sx={{width:'fit-content',border:'1px solid #eef6f9 c',mt:1,mx:'auto'}}

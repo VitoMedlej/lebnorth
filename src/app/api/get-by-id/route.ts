@@ -13,7 +13,7 @@ export async function GET(req : NextRequest, res : NextApiResponse) {
       
     }
     const ProductsCollection = await client
-    .db("DIY")
+    .db("LEB")
     .collection("Products");
 
     let moreProducts: any[]= []

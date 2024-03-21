@@ -35,6 +35,19 @@ const NavButtom = () => {
                     Sale
                     </Typography>
                 </Link> */}
+                <Link className='black decor-none ' href={`/collection/products`}>
+
+<Typography 
+className=' cursor center flex gap1 black decor-none captialize'
+id="button"
+component='h1' sx={{width:'max-content',
+mx:'1em',
+alignItems: 'center',
+
+fontWeight:500,fontSize:{xs:'.86em',sm:'.95em'}}}>
+Collection
+</Typography>
+</Link>
                   <Link className='black decor-none ' href={`/about`}>
 
 <Typography 
@@ -45,32 +58,25 @@ mx:'1em',
 alignItems: 'center',
 
 fontWeight:500,fontSize:{xs:'.86em',sm:'.95em'}}}>
-Learn More
+Gadgets
+
+
 </Typography>
 </Link>
-
-<MenuHover img='' category={'5D Diy Kits'} subcategories={[  
- "LANDSCAPES",
- 'PORTRAIT',
- "NATURE",
- "RELIGIOUS",
- "KIDS & CARTOONS",
- "TISSUE BOX",
- "CUP COASTER",
- "KEY CHAINS",
- "DOUBLE MIRROR",
- "PENCIL CASE"
+<MenuHover img='' category={'Accessories'} subcategories={[  
+`Cases`,
+`Chargers`,
+`Cables`,
+`Headphones`,
+`Power Banks`
 ]}/>
 
-<MenuHover img='' category={'Materials'} subcategories={[  "SEALER BRIHTNER",
-  "OTHERS",
-  "BOXES & STORAGES",
-  "LED LIGHT PAD",
-  "CORRECTION & FENEL",
-  "CLIPS & MON-STICK PAPPER",
-  "LABEL NUMBER STICKERS",
-  "PLATE & ROLLER",
-  "PENS"
+<MenuHover img='' category={'Networking'} subcategories={[  "SEALER BRIHTNER",
+`Routers`,
+`Switches`,
+`Modems`,
+`Network Security`,
+`Wireless Solutions`,
 ]}/>
 
 
@@ -79,7 +85,7 @@ Learn More
         // `Craft Supplies`,
     // `5D DIY Kits`,
     // 'MATERIELS',
-    `Customized`,
+    `Communication`,
    
     ].map(i=>{
         return <Link key={i} className='black decor-none ' href={`/${i.toLocaleLowerCase()}/products`}>
@@ -98,149 +104,13 @@ Learn More
     })
 }
 
-<Link className='black decor-none ' href={`/almost done/products`}>
-
-<Typography 
-className=' cursor center flex gap1 black decor-none captialize'
-id="button"
-component='h1' sx={{width:'max-content',
-mx:'1em',
-alignItems: 'center',
-
-fontWeight:500,fontSize:{xs:'.86em',sm:'.95em'}}}>
-Almost Done
-</Typography> 
-</Link>
-
-<Link className='black decor-none ' href={`/collection/products`}>
-
-<Typography 
-className=' cursor center flex gap1 black decor-none captialize'
-id="button"
-component='h1' sx={{width:'max-content',
-mx:'1em',
-alignItems: 'center',
-
-fontWeight:500,fontSize:{xs:'.86em',sm:'.95em'}}}>
-Collection
-</Typography>
-</Link>
 
 
 
-
-<Link className='black decor-none ' href={`/#FEEDBACK`}>
-
-<Typography 
-className=' cursor center flex gap1 black decor-none captialize'
-id="button"
-component='h1' sx={{width:'max-content',
-mx:'1em',
-alignItems: 'center',
-
-fontWeight:500,fontSize:{xs:'.86em',sm:'.95em'}}}>
-Feedbacks
-</Typography>
-</Link>
-
-               
-               
-       
-
-
-
- 
-
-
-{/* <Link className='black decor-none ' href={`/organic herbs/products`}>
-
-<Typography 
-className=' cursor center flex gap1 black decor-none captialize'
-id="button"
-component='p' sx={{width:'max-content',
-mx:'1em',
-alignItems: 'center',
-
-fontWeight:500,fontSize:{xs:'.86em',sm:'.95em'}}}>
-Organic Herbs
-</Typography>
-</Link>
-<Link className='black decor-none ' href={`/natural supplements/products`}>
-
-<Typography 
-className=' cursor center flex gap1 black decor-none captialize'
-id="button"
-component='p' sx={{width:'max-content',
-mx:'1em',
-alignItems: 'center',
-
-fontWeight:500,fontSize:{xs:'.86em',sm:'.95em'}}}>
-Natural Supplements
-</Typography>
-</Link> */}
-
-
-
-{/* <Link className='black decor-none ' href={`/about`}>
-
-<Typography 
-className=' cursor center flex gap1 black decor-none '
-id="button"
-component='p' sx={{width:'max-content',
-mx:'1em',
-alignItems: 'center',
-
-fontWeight:500,fontSize:{xs:'.86em',sm:'.95em'}}}>
-About Us
-</Typography>
-</Link> */}
-
-{/* <Link className='black decor-none uppercase' href={`/new-arrivals/products`}>
-
-<Typography 
-className=' cursor center flex gap1 black decor-none uppercase'
-id="button"
-component='p' sx={{width:'max-content',
-alignItems: 'center',
-mx:'1em',
-
-fontWeight:600,fontSize:{xs:'.6em',sm:'.75em'}}}>
-New Arrivals
-</Typography>
-</Link> */}
-                {/* <Link className='black decor-none uppercase' href={`/birds/products`}>
-
-                <Typography 
-      className=' cursor center flex gap1 black decor-none uppercase'
-        id="button"
-        component='p' sx={{width:'max-content',
-        mx:'1em',
-        alignItems: 'center',
-        
-        fontWeight:600,fontSize:{xs:'.6em',sm:'.75em'}}}>
-     Birds
-   </Typography>
-   </Link> */}
-           
-
-            {/* { [
-    {cate:"Categories",subCate:catsSubcategories,img:`https://th.bing.com/th/id/R.1776ae53615a64b359d8d65cf5eca544?rik=WKeDBh1pbwPftA&riu=http%3a%2f%2fwww.kmart.com.au%2fwcsstore%2fKmart%2fimages%2fespots%2fpets-beds-050418-tall-banner.jpg&ehk=fwMSwpMwGOLad6eRmrG%2bT48oAdH2G7Y8Mm2thOjl3Zk%3d&risl=&pid=ImgRaw&r=0`},
-    // {cate:"Dogs",subCate:dogsSubcategories,img:`https://mypetguru.com/imgs/uploads/toy-for-dog.jpg`},
-    // {cate:"Offers",subCate:offersSubcategories,img:'https://i.pinimg.com/originals/bf/cb/59/bfcb59f20bddc43101e39de2cc142f7e.jpg'}
-].map(i => {
-                // return <Link className='clr decor-none uppercase' key={i} href={`/${i.replace(/ /g, '-').toLocaleLowerCase()}/products`}>
-                //     <Typography  component='p' sx={{width:'max-content',fontWeight:600,fontSize:{xs:'.6em',sm:'.75em'}}}>                    
-                //     {i}
-                //     </Typography>
-                // </Link>
-                return  <MenuHover img={i.img} key={i.cate} category={i.cate} subcategories={i.subCate}/>
-            })} */}
 
 
         </Container>
 
-        
-   
     </Box>
   )
 }

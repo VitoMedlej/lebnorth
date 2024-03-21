@@ -13,12 +13,13 @@ import Btn from './Btn/Btn'
 import useLanguage from '@/Hooks/useLanguage'
 import ContactSection from './ContactSection/ContactSection'
 import HomeProductsCarousel from './HomeProductsCarousel/HomeProductsCarousel'
+import SMicons from './SMicons/SMicons'
 
 const 
-PreLoader = ({data,resImages,vids}:any) => {
-  let videosArray = vids && vids[0]?.videos?.videos || null
+PreLoader = ({data,resImages}:any) => {
+
   const router= useRouter();
-  const {text} = useLanguage()
+
   // const textsArray = [
   //   {
   //     id: 1,
@@ -55,210 +56,87 @@ PreLoader = ({data,resImages,vids}:any) => {
   // ];
   
   
-
   return (
     <Box >
+        <Container sx={{py:8}} className="center">
+          <Typography sx={{fontWeight:800,fontSize:'1.5em'}} className='center text-center'>
+            Welcome to Leb North your IT and Technology Partner.
+          </Typography>
+        </Container>
       <MainCarousel imgs={resImages}/>
-      {/* <HomeProductCollection  products={data}/> */}
- 
-        <HomeProductsCarousel data={data} Collectiontitle={''} delay={2000}/>
-        <Testimonials/>
-      <Grid container sx={{maxWidth:'lg',mx:'auto'}}>
-        <Grid className='flex items-center' item xs={12} md={5}>
-            <Box className=' col flex items-center' sx={{
-              background:'#eef6f9 ',
-             px:{xs:1,sm:4},py:4,
-              borderRadius:'4px',
-              transform:{md:'translateX(25%)'},
-           }}>
-            <Typography
-component={'h1'}
-    className='sectionTitle   text-center box'
-    sx={{
- 
-    fontSize: {
-        xs: '2em',
-        sm: '3em'
-    },
-    padding:.5,
-    fontWeight: '900'
-}}>
- Diamond Painting is easy and fun!
-</Typography>
-<Typography
-component={'p'}
-    className='sectionTitle   text-center box'
-    sx={{
- 
-    fontSize: {
-        xs: '.8em',
-        sm: '1em'
-    },
-    padding:.5,
-    fontWeight: '300'
-}}>
-Explore our curated collection of diamond painting kits designed to inspire and captivate. 
-</Typography>
-            </Box>
-        </Grid>
-        <Grid item xs={12} md={7}>
-          <Box className='auto' sx={{width:'95%',height:'100%'}}>
-            <img style={{borderRadius:'4px'}} src={ resImages &&  resImages?.categoryImage &&  resImages?.categoryImage[0]?.img || "https://www.diamondartclub.com/cdn/shop/products/panda-valley-diamond-art-painting-28849132699841.jpg?v=1618161449&width=4058"} alt="" className="img" />
-          </Box>
-        </Grid>
-      </Grid>
-
-      <Grid container sx={{my:{xs:6,sm:12},maxWidth:'lg',mx:'auto'}}>
-      <Grid item xs={12} md={7}>
-          <Box className='auto' sx={{width:'95%',height:'100%'}}>
-            <img style={{borderRadius:'4px'}} src={resImages &&  resImages?.categoryImage && resImages?.categoryImage[1]?.img || "https://files.ekmcdn.com/d43ebb/images/diamond-dotz-diamond-painting-kit-kitty-basket-1-249415-p.webp"} alt="" className="img" />
-          </Box>
-        </Grid>
-        
-        <Grid className='flex items-center' item xs={12} md={5}>
-            <Box className=' col flex items-center' sx={{
-              background:'#eef6f9 ',
-             px:{xs:1,sm:4},py:4,
-              borderRadius:'4px',
-              transform:{md:'translateX(-25%)'},
-           }}>
-            <Typography
-component={'h1'}
-    className='sectionTitle   text-center box'
-    sx={{
- 
-    fontSize: {
-        xs: '2em',
-        sm: '3em'
-    },
-    padding:.5,
-    fontWeight: '900'
-}}>
- Lebanon&apos;s Shining DIY Trend
-</Typography>
-<Typography
-component={'p'}
-    className='sectionTitle   text-center box'
-    sx={{
- 
-    fontSize: {
-        xs: '.8em',
-        sm: '1em'
-    },
-    padding:.5,
-    fontWeight: '300'
-}}>
-Elevate your crafting game with DIY Crafts Diamond Painting. Join the trend sweeping Lebanon—easy, enjoyable, and dazzling creativity at your fingertips.
-</Typography>
-            </Box>
-        </Grid>
-     
-      </Grid>
-
-      <Perks/>
-
-      {/* <Box className='bg'>
-            <Container sx={{py:8}} className='flex row wrap justify-around space-around'>
-              {[{
-                img:'https://www.diamonddotz.com/image/banners/greeting-cards.jpg',
-                category:'Greeting Cards'
-              },
-              {
-                img:'https://www.diamonddotz.com/image/banners/dotz-box.jpg',
-                category:'DOTZ BOX'
-              },
-              {
-                img:'https://www.diamonddotz.com/image/banners/accessories.jpg',
-                category:'Freestyle Accessories'
-              },
-              {
-                img:'https://www.diamonddotz.com/image/banners/dotzies.jpg',
-                category:'DOTZIES Kits for kids'
-              }
-              
-              ].map(i=>{ return    <Box sx={{my:2,height:{xs:'100%'},maxWidth:'550px',width:{xs:"95%",sm:'49%'}}} key={i?.category}>
-                
-                <Box sx={{height:{xs:'400px',sm:'500px',md:'600px'},width:'100%'}}>
-                      <img style={{borderRadius:'4px'}} src={`${i?.img}`} alt="" className="img" /> 
-              </Box>
-              <Box sx={{pt:1}} className='flex row justify-between space-between'>
-
-                    <Typography component='h1' sx={{fontSize:'1.5em'}} className='center'>
-                      {i?.category}
-                    </Typography>
-                    <Btn sx={{border:'none'}}>
-                      Shop Now
-                    </Btn>
-              </Box>
-                </Box>
-            })}
-            </Container>
-      </Box> */}
-      {/* <HomeProductCollection  products={data}/> */}
-
-
       <Container>
-      <Box className='flex col center text-center' sx={{my:6}}>
-      <Typography
-component={'h1'}
-    className='sectionTitle   text-center box'
-    sx={{
- 
-    fontSize: {
-        xs: '2em',
-        sm: '3em'
-    },
-    padding:.5,
-    fontWeight: '900'
-}}>
- DIY Diamond Painting Videos
-</Typography>
-<Typography
-component={'p'}
-    className='sectionTitle   text-center box'
-    sx={{
- 
-    fontSize: {
-        xs: '.8em',
-        sm: '1em'
-    },
-    padding:.5,
-    fontWeight: '300'
-}}>
-Collection of our latest video reels from our social media!
-</Typography>
-      </Box>
-      <Box sx={{gap:'.5em'}} className='flex wrap row center   auto'>
+        <Typography sx={{fontSize:'.9em'}}>
+        Explore the Latest in Tech Innovation at Leb North | Your Gateway to a Diverse Range of Gadgets, Gizmos, and Gear | Dive into Our Extensive Collection of Smartphones, Laptops, Gaming Consoles, and More | Elevate Your Digital Lifestyle with the Hottest Tech Trends | Find Your Perfect Tech Companion Today.
+        </Typography>
+      </Container>
 
-        {    
+      <Container className='' sx={{maxWidth:'lg',py:8}}>
+        <Typography className='center  clr text-center' sx={{fontWeight:600,fontSize:'2em'}}>
+        Top Categories
+        </Typography>
 
-            //  [
-            //   `https://res.cloudinary.com/dwcu3wcol/video/upload/v1707643034/Ultimate_ASMR_Diamond_Painting_may334.mp4`,
-            //   `https://res.cloudinary.com/dwcu3wcol/video/upload/v1707643174/Satisfying_ASMR_Diamond_Painting_Magic_ptpwhd.mp4`,
-            //   `https://res.cloudinary.com/dwcu3wcol/video/upload/v1707643143/Diamond_painting_tutorial_for_beginners_at_a_glance_dplhge.mp4`,
-            // ]
-            
-            vids && videosArray && videosArray.map((video:any)=>{
-              console.log('video: ', video);
+        <Box sx={{mt:1}} className='flex cursor pointer wrap justify-between center text-center'>
+          {[1,2,3,4,5].map(i=>{
+            return  <Box key={i} sx={{width:{xs:'33%',sm:'32%',md:'22%'},maxWidth:'200px'}}>
+            <Box>
+              <img 
+               src="https://securytik.com/wp-content/uploads/2023/12/2023-12-10-00_16_20-Computer-Icons-Logos-Symbols-%E2%80%93-Free-Download-PNG-SVG-%E2%80%94-Mozilla-Firefox-300x300.png" alt="" className="img" />
+              </Box>
+              
+              <Typography sx={{fontWeight:700}}>
+                COMPUTER
+              </Typography>
 
-                    return <Box sx={{maxHeight:{xs:'400px',sm:'500px'},maxWidth:{xs:'100%',sm:'48%',md:'32%'}}} key={video}>
-
-          <video
-          controls={true}
-          style={{objectFit:'cover'}}
-          key={video} muted loop autoPlay width="100%" height="100%" >
-                <source src={video} type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-                    </Box>
-            })
-        }
-        
+            </Box>
+          })}
         </Box>
       </Container>
-    
+      <HomeProductCollection  products={data}/>
 
-        
+          <SMicons/>
+          
+
+          <Container className='' sx={{maxWidth:'lg',py:8}}>
+        <Typography className='center  clr text-center' sx={{fontWeight:600,fontSize:'2em'}}>
+        Top Categories
+        </Typography>
+
+        <Box sx={{mt:1}} className='flex row  wrap justify-between center text-center'>
+          {[1,2,3,4,5,6,7].map(i=>{
+            return  <Box key={i} sx={{width:{xs:'33%',sm:'15%',md:'15%'},maxWidth:'150px'}}>
+            <Box>
+              <img 
+               src="https://securytik.com/wp-content/uploads/2023/12/intel-150x150.jpeg" alt="" className="img" />
+              </Box>
+              
+
+            </Box>
+          })}
+        </Box>
+      </Container>
+
+      <Container >
+        <Typography sx={{fontSize:'.9em'}} className='clr2'>
+        Experience Unmatched Quality and Service at Leb North | Where Technology Meets Convenience and Affordability | Browse Through Our Curated Selection of Premium Tech Products and Accessories | From State-of-the-Art Electronics to Must-Have Gadgets
+
+        </Typography>
+        <Typography sx={{py:1.5,fontSize:'.9em'}} className='clr2'>
+Experience Excellence in Every Purchase with Leb North | Where Customer Satisfaction is Our Top Priority | Benefit from Fast and Secure Online Transactions | Enjoy Hassle-Free Returns and Reliable Customer Support
+        </Typography>
+        <Typography sx={{fontSize:'.9em'}} className='clr2'>
+
+Keep Pace with the Rapidly Evolving World of Technology with Leb North | Your Trusted Partner for Tech Solutions and Innovations | Gain Access to Expert Advice and Recommendations | Stay Informed with the Latest Tech News and Updates
+        </Typography>
+      </Container>
+     
+        {/* <HomeProductsCarousel data={data} Collectiontitle={''} delay={2000}/> */}
+     
+        {/* <Testimonials/> */}
+     
+
+     
+     
+    
         <ContactSection/>
   </Box>
   )

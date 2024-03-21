@@ -63,22 +63,11 @@ import PreLoader from "@/Components/PreLoader"
 
 //  }
 const fetchDataAndSetImgs = async () => {
-  const response = await fetch('https://api.jsonbin.io/v3/b/65c6a1c1dc74654018a2aefa', {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'X-Master-Key': '$2a$10$EmZy/K6nP9jFiENx19cWquoDmlzeSi1lNytC2AZ3IIi51g2G/aA1e'
-    },
-    next: {revalidate:1000}
-  })
-  if (!response?.ok) {
-    throw new Error(`Failed to fetch data. Status: ${response?.status}`);
-  }
-
-  const data = await response.json();
-  console.log('data: ', data);
-  // setImgs(data?.record); // Assuming 'record' is the property containing the images in the response
-return data?.record
+  const req = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-images`,
+  {next:{revalidate:100} })
+  let res = req &&  await req.json();
+  if (res) return res?.Images
+  return null;
 }
 
 // useEffect(() => {
@@ -98,13 +87,12 @@ try {
   const imgs = await fetchDataAndSetImgs()
   // const vids = await fetchDataAndSetVideos()
   // console.log('vids: ', vids);
-    let vids = res?.data?.vids;
-    console.log('vids: ', vids);
+
       // let resImages : any ={}
       // let res = {data:{featuredProducts:null}}
       
       return (
-        <PreLoader vids={vids || null} resImages={imgs || null} data={res?.data?.featuredProducts}/>
+        <PreLoader  resImages={imgs || null} data={res?.data?.featuredProducts}/>
        )
 }
 catch (e) {

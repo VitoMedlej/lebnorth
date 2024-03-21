@@ -11,7 +11,7 @@ import { useEffect, useState} from 'react';
 
 import SearchModal from './SearchModal';
 import Link from 'next/link';
-import {Badge, Divider, Typography} from '@mui/material';
+import {Badge, Container, Divider, Typography} from '@mui/material';
 // import { loadState } from '../../Utils/LocalstorageFn';
 import {useRouter} from 'next/navigation';
 // import {AiOutlinePhone, AiOutlineSearch, AiOutlineMenu} from 'react-icons/ai'
@@ -43,7 +43,7 @@ export default function Navbar() {
     // const localCart = [1]
     useEffect(() => {
         const cart : any = []
-        // const cart = loadState('l12oxio951209XJkgop15v') || []
+        // const cart = loadState('clartloclal51z') || []
         if (cart) {
 
             setLocalCart(cart)
@@ -79,11 +79,56 @@ export default function Navbar() {
                 width:'100%',
             margin: '0 auto',
         }}>
-            <Box className='center text-center' sx={{background:'#0f0f0f',width:'100%',py:.25}}>
+              <Box className='flex items-center row bg'
+                   sx={{justifyContent:'flex-end',py:.3}}>
+<Container className='flex wrap' sx={{margin:0,px:.5,justifyContent:'space-evenly',
+maxWidth:{xs:'100%',sm:'lg'}}}>
+
+            <Box className='flex row items-center'>
+                <Box sx={{pr:.1,height:'20px'}}>
+
+            <img src="https://www.svgrepo.com/show/533285/phone.svg" alt="" className="img" />
+                </Box>
+            <Typography sx={{color:'black',fontSize:'.70em',textAlign:'end',fontWeight:600}}>
+            +961 3 545 717
+            </Typography>
+            </Box>
+            <Box className='flex row items-center'>
+                <Box sx={{pr:.1,height:'20px'}}>
+
+            <img src="https://cdn-icons-png.flaticon.com/128/535/535239.png" alt="" className="img" />
+                </Box>
+            <Typography sx={{color:'black',fontSize:'.70em',textAlign:'end',fontWeight:600}}>
+            Beirut | Lebanon
+
+            </Typography>
+            </Box>
+
+
+            <Box className='flex row items-center'>
+                <Box sx={{pr:.1,height:'20px'}}>
+
+            <img src="https://www.svgrepo.com/show/520798/instagram.svg" alt="" className="img" />
+                </Box>
+            <Typography sx={{color:'black',fontSize:'.70em',textAlign:'end',fontWeight:600}}>
+            @shineplus_carspa
+            </Typography>
+            </Box>
+            <a className='decor-none' href={`https://wa.me/${process.env.NEXT_PUBLIC_WA}`}>
+            <Btn sx={{display:{xs:'none',sm:'flex'},py:.2}}>
+                                         
+                                    BOOK NOW
+                                  </Btn>
+      </a>                        
+       
+</Container>
+
+            </Box>
+            {/* <Box className='center text-center' sx={{background:'#0f0f0f',width:'100%',py:.25}}>
                 <Typography className='clr' component='p' sx={{py:.2,fontSize:{xs:'.75em',sm:'.75em'}}}>
             DELIVERY AVAILABLE ALL OVER LEBANON
                 </Typography>
-            </Box>
+            </Box> */}
             <Toolbar
      id='navy3'
 
@@ -109,7 +154,7 @@ export default function Navbar() {
 }}>
     <img
         className='img'
-        src={`https://ucarecdn.com/8dfcc837-04af-471f-b263-efd704c1be94/WhatsAppImage20240203at0814371.jpeg`}
+        src={`https://ucarecdn.com/0f2afae9-efff-4c52-b21d-61b31fb19f75/logopng.jpg`}
         alt="diy_crafts_diamond_painting logo"/>
 </Box>
 </Link>
@@ -137,17 +182,7 @@ export default function Navbar() {
                         className='flex right'>
                              
                         
-                             
-                             {/* <Btn
-                            onClick={() => setLang(lang === 'en' ? 'ar' : 'en')}
-                            sx={{
-                                margin : '8px',padding:0,
-                            color: 'black',
-
-                            // margin: '0.1em',
-                        }}>
-                            {text('العربية','English')}
-                        </Btn> */}
+                       
                         {/* <IconButton
                             onClick={() => setOpenModal(!openModal)}
                             sx={{

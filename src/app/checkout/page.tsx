@@ -60,8 +60,8 @@ export default function Checkout() {
 
     const handleNext = () => {
       if (info?.checkbox2 && info?.checkbox && info && info.email && info.firstName && info.lastName && info.address1 && info.phone) {
-        localStorage.setItem('2VI1H2OI-FJ04BJZ2X',JSON.stringify({...info, name : `${info.firstName} ${info.lastName}`}))
-        saveState('2VI1H2OI-FJ04BJZ2X',info)
+        localStorage.setItem('4jiinfo',JSON.stringify({...info, name : `${info.firstName} ${info.lastName}`}))
+        saveState('4jiinfo',info)
         setActiveStep(activeStep + 1);
       
       } 
@@ -75,7 +75,7 @@ export default function Checkout() {
 
 
     const saveOrder = async () => {
-      const products = loadState('l12oxio951209XJkgop15v')
+      const products = loadState('clartloclal51z')
  
 
       const total = 10
@@ -91,8 +91,8 @@ export default function Checkout() {
             body: JSON.stringify({order:{info,products,total}})
         });
   const content = await rawResponse.json();
-  saveState('l12oxio951209XJkgop15v',null)
-  saveState('2VI1H2OI-FJ04BJZ2X',null)
+  saveState('clartloclal51z',null)
+  saveState('4jiinfo',null)
 
 }
   }

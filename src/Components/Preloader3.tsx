@@ -15,11 +15,10 @@ import useLanguage from '@/Hooks/useLanguage';
 const Preloader3 = ({res}:{res:any}) => {
     const router = useRouter()
  const [imgs,setImgs] = useState(
-     
      [
-         {img:'https://www.diamonddotz.com/image/cache/catalog/banners/2024%20web%20sliders/DOTZIES%20for%20Kids_jan%202024-1600x684.jpg',position:'centerd'},
-  {img:'https://www.diamonddotz.com/image/cache/catalog/banners/202401/new%20year%20new%20things_DD%20kits_0102-1600x684.jpg',position:'topd'},
-  {img:`https://www.diamonddotz.com/image/cache/catalog/banners/202401/new%20year%20new%20things_Masterclass0101-1600x684.jpg`,position:'topd'},
+     {img:'https://securytik.com/wp-content/uploads/2023/12/banner-3-1536x581.jpg',position:'centerd'},
+  {img:'https://securytik.com/wp-content/uploads/2023/12/banner-4-1536x581.jpg',position:'topd'},
+  {img:`https://securytik.com/wp-content/uploads/2023/12/Banner1-2-1536x581.jpg`,position:'topd'},
 ]
 )
 console.log('imgs: ', imgs);
@@ -35,16 +34,17 @@ useEffect(() => {
     
     return (
         <Box
+        className=''
             sx={{
+                
             // py: {xs:'.75em',sm:'2em',md:'3em'},
             // width: {xs:'98%',md:'74%',lg:'80%'},
             width:'100%',
-            maxWidth:'none',
-            // maxWidth: 'lg',
+            maxWidth: 'lg',
             minHeight:'300px',
             height:'100%',
             maxHeight:{sm:'100%',md:'500px',lg:'500px'},
-            margin: '0 auto',
+            margin: '1em auto',
             // height : {xs:'100%',sm:'450px',md:'100%'},
             
             display: {

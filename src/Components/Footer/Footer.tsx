@@ -18,11 +18,11 @@ const Footer = () => (
               {/* <a><h1 className="site-logo"><Logo />E-Shop</h1></a> */}
               {/* https://res.cloudinary.com/dwxm8f25f/image/upload/v1675357773/logo_ghli5e.jpg */}
               {/* https://res.cloudinary.com/dwxm8f25f/image/upload/v1675713948/logo_sktnut_1_jwy2hk.png */}
-            <img className='img ' src='https://ucarecdn.com/8dfcc837-04af-471f-b263-efd704c1be94/WhatsAppImage20240203at0814371.jpeg' alt="Pets Town Lebanon Logo" />
+            <img className='img ' src='https://ucarecdn.com/0f2afae9-efff-4c52-b21d-61b31fb19f75/logopng.jpg' alt="Pets Town Lebanon Logo" />
             </Link>
           </div>
           <Typography component='h1' sx={{ fontSize: '.85em',color:"2b2b2b" }}  className='footer-p '>
-          Welcome to DIY Crafts Diamond Painting, where creativity knows no bounds. Explore our curated collection of diamond painting kits designed to inspire and captivate. Whether you&apos;re a seasoned artist or just starting your creative journey, our kits provide a perfect blend of relaxation and artistic satisfaction. Order now and embark on a dazzling adventure of self-expression!
+          Unlock the Power of Technology with Leb North | Lebanon's Premier Online Retailer for Cutting-Edge Tech Products and Communication Solutions | Elevating Your Digital Experience with Top-Quality Gadgets and Expert Consultation | Explore Our Vast Inventory of High-Performance Devices and Accessories | Empowering Your Tech Journey, Every Step of the Way
           </Typography>
           <SMicons/>
 

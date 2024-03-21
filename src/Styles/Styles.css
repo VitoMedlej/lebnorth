@@ -2,15 +2,15 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
 h1 {
-  font-family: "Playfair Display", serif !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
 *, h2, h3, h4, h5, h6, p, button, input, select, textarea, a {
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .w100 {
@@ -55,7 +55,7 @@ h1 {
 }
 
 .borderColor {
-  border-color: #eef6f9 !important;
+  border-color: #4acfff !important;
 }
 
 .borderColor2 {
@@ -71,7 +71,7 @@ h1 {
 }
 
 .color {
-  color: #eef6f9 !important;
+  color: #4acfff !important;
 }
 
 .flex {
@@ -111,7 +111,7 @@ h1 {
 }
 
 .bg {
-  background: #eef6f9 !important;
+  background: #4acfff !important;
 }
 
 .white {
@@ -164,7 +164,7 @@ button[disabled] {
 }
 
 .clr {
-  color: #eef6f9 !important;
+  color: #4acfff !important;
 }
 
 .auto {
