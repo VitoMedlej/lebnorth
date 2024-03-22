@@ -76,15 +76,40 @@ PreLoader = ({data,resImages}:any) => {
         </Typography>
 
         <Box sx={{mt:1}} className='flex cursor pointer wrap justify-between center text-center'>
-          {[1,2,3,4,5].map(i=>{
-            return  <Box key={i} sx={{width:{xs:'33%',sm:'32%',md:'22%'},maxWidth:'200px'}}>
+          {[
+
+            {
+              title:`Computer`,
+              img:`https://securytik.com/wp-content/uploads/2023/12/2023-12-10-00_16_20-Computer-Icons-Logos-Symbols-%E2%80%93-Free-Download-PNG-SVG-%E2%80%94-Mozilla-Firefox-300x300.png`,
+            },
+            {
+              title:`Network`,
+              img:`https://securytik.com/wp-content/uploads/2023/12/2023-12-10-00_00_38--300x300.png`
+},
+{
+  title:`Storage`,
+  img:`https://securytik.com/wp-content/uploads/2023/12/2023-12-10-00_14_42-Hard-disk-Icons-Logos-Symbols-%E2%80%93-Free-Download-PNG-SVG-%E2%80%94-Mozilla-Firefox-300x300.png`
+},
+{
+  title:`Server`,
+  img:`https://securytik.com/wp-content/uploads/2023/12/2023-12-10-00_11_12-Server-Icons-Logos-Symbols-%E2%80%93-Free-Download-PNG-SVG-%E2%80%94-Mozilla-Firefox-300x300.png`
+},
+{
+  title:`Boards`,
+  img:`https://securytik.com/wp-content/uploads/2023/12/2023-12-09-23_57_47-Electronic-board-Icons-Logos-Symbols-%E2%80%93-Free-Download-PNG-SVG-%E2%80%94-Mozilla-Firefo-300x300.png`
+},
+
+
+          ].map(i=>{
+            return  <Box key={i.title} sx={{width:{xs:'33%',sm:'32%',md:'22%'},maxWidth:'200px'}}>
             <Box>
               <img 
-               src="https://securytik.com/wp-content/uploads/2023/12/2023-12-10-00_16_20-Computer-Icons-Logos-Symbols-%E2%80%93-Free-Download-PNG-SVG-%E2%80%94-Mozilla-Firefox-300x300.png" alt="" className="img" />
+               src={`${i?.img}`}               
+               alt="" className="img" />
               </Box>
               
               <Typography sx={{fontWeight:700}}>
-                COMPUTER
+                {i.title}
               </Typography>
 
             </Box>
@@ -98,7 +123,7 @@ PreLoader = ({data,resImages}:any) => {
 
           <Container className='' sx={{maxWidth:'lg',py:8}}>
         <Typography className='center  clr text-center' sx={{fontWeight:600,fontSize:'2em'}}>
-        Top Categories
+        Our Brands
         </Typography>
 
         <Box sx={{mt:1}} className='flex row  wrap justify-between center text-center'>

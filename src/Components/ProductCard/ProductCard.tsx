@@ -51,7 +51,7 @@ const ProductCard = ({
             py: 1,
             margin: '0em auto',
             my:1,
-            minWidth: {sm:'30%'},
+            minWidth: {sm:'20%'},
             width: width
                 ? width
                 : {
@@ -80,17 +80,30 @@ const ProductCard = ({
             sx={{
                 px: .95,
                 mt:1.5,
-            }}>  <Typography
+            }}>
+                    <Typography
             className=' cursor limited  center text-center '
+                    component='p'
+                    onClick={() => router.push(`/product/${_id}`)}
+                    sx={{
+                        color:'gray'
+                    ,fontSize: {xs:'.7em',sm:'.8em',md:'.8em'},
+                    fontWeight: '400'
+                }}>
+                    {category}
+                </Typography>
+                  <Typography
+            className=' cursor   center text-center '
                     component='h1'
                     onClick={() => router.push(`/product/${_id}`)}
                     sx={{
                         color:'black'
-                    ,fontSize: {xs:'1em',sm:'1.15em',md:'1.32em'},
-                    fontWeight: '400'
+                    ,fontSize: {xs:'.91em',sm:'1.015em',md:'1.02em'},
+                    fontWeight: '500'
                 }}>
                     {title}
                 </Typography>
+            
         
                
               
@@ -107,10 +120,10 @@ const ProductCard = ({
 >
     {category?.toLocaleLowerCase() !== 'almost done' && newPrice ? (
         <>
-            <s>{price}$</s> {newPrice}$
+            <s>${Number(price).toFixed(2)}</s> ${Number(newPrice).toFixed(2)}
         </>
     ) : (
-        category?.toLocaleLowerCase() !== 'almost done' && price ? `${price}$` : category
+        category?.toLocaleLowerCase() !== 'almost done' && price ? `$${Number(price).toFixed(2)}` : category
     )}
 </Typography>
                {/* <Typography
