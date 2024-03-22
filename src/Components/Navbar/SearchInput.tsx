@@ -29,10 +29,10 @@ export default function SearchInput({sx,mobile,handleSubmit,newValue}:{newValue?
       className='searchinput bg'
       sx={{
         py:'.25em',
-        mx:2,
+        mx:1,
         // my:'.25em',
         mb: mobile ? '.25em' : '0',
-        px:'.5em',
+        px:'.25em',
         // mb:'.5em',
         flex:1,
         flexBasis:'100%',
@@ -42,7 +42,7 @@ export default function SearchInput({sx,mobile,handleSubmit,newValue}:{newValue?
         
         //  display: mobile ? {xs:'flex',md:'none'} : {xs:'none',md:'flex'},
          display:'flex',
-         alignItems: 'center',maxWidth:{xs:'100%',md:'600px',lg:'60%'}
+         alignItems: 'center',maxWidth:{xs:'fit-content',md:'500px',lg:'60%'}
          ,...sx
         }}
     >
@@ -55,7 +55,8 @@ export default function SearchInput({sx,mobile,handleSubmit,newValue}:{newValue?
         setValue && setValue(`${e.target.value as string}`)}}
         sx={{
           display: 'flex',
-          ml: 1,w:'100%', flex: 1 }}
+          ml: 1,w:'max-content',minWidth:'150px',
+           flex: 1 }}
         placeholder="Search Anything"
         inputProps={{ 'aria-label': 'search products' }}
       />
