@@ -65,7 +65,7 @@ PreLoader = ({data,resImages}:any) => {
         </Container>
       <MainCarousel imgs={resImages}/>
       <Container>
-        <Typography sx={{fontSize:'.9em'}}>
+        <Typography sx={{fontSize:'.99em'}}>
         Explore the Latest in Tech Innovation at Leb North | Your Gateway to a Diverse Range of Gadgets, Gizmos, and Gear | Dive into Our Extensive Collection of Smartphones, Laptops, Gaming Consoles, and More | Elevate Your Digital Lifestyle with the Hottest Tech Trends | Find Your Perfect Tech Companion Today.
         </Typography>
       </Container>
