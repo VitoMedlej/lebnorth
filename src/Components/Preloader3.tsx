@@ -7,8 +7,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { useRouter } from 'next/navigation';
 import { Autoplay } from 'swiper';
-import Btn from './Btn/Btn';
-import useLanguage from '@/Hooks/useLanguage';
+// import Btn from './Btn/Btn';
+// import useLanguage from '@/Hooks/useLanguage';
 
 
 

@@ -22,7 +22,13 @@ const Footer = () => (
             </Link>
           </div>
           <Typography component='h1' sx={{ fontSize: '.85em',color:"2b2b2b" }}  className='footer-p '>
-          Unlock the Power of Technology with Leb North | Lebanon's Premier Online Retailer for Cutting-Edge Tech Products and Communication Solutions | Elevating Your Digital Experience with Top-Quality Gadgets and Expert Consultation | Explore Our Vast Inventory of High-Performance Devices and Accessories | Empowering Your Tech Journey, Every Step of the Way
+          Unlock the Power of Technology with Leb North |
+           Lebanon&apos;s Premier Online Retailer for Cutting-Edge
+            Tech Products and Communication Solutions |
+             Elevating Your Digital Experience with Top-Quality
+              Gadgets and Expert Consultation | Explore Our Vast
+               Inventory of High-Performance Devices and Accessories 
+               | Empowering Your Tech Journey, Every Step of the Way
           </Typography>
           <SMicons/>
 
