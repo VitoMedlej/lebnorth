@@ -90,7 +90,7 @@ maxWidth:{xs:'100%',sm:'lg'}}}>
             <img src="https://www.svgrepo.com/show/533285/phone.svg" alt="" className="img" />
                 </Box>
             <Typography sx={{color:'black',fontSize:'.70em',textAlign:'end',fontWeight:600}}>
-            +961 3 545 717
+            +961 1 234 567
             </Typography>
             </Box>
             <Box className='flex row items-center'>
