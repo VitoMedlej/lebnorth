@@ -57,7 +57,7 @@ PreLoader = ({data,resImages}:any) => {
   
   
   return (
-    <Box >
+    <Box sx={{mt:8}}>
         <Container sx={{py:8}} className="center">
           <Typography sx={{fontWeight:800,fontSize:'1.5em'}} className='center text-center'>
             Welcome to Leb North your IT and Technology Partner.
@@ -127,11 +127,18 @@ PreLoader = ({data,resImages}:any) => {
         </Typography>
 
         <Box sx={{mt:1}} className='flex row  wrap justify-between center text-center'>
-          {[1,2,3,4,5,6,7].map(i=>{
+          {[
+            `https://securytik.com/wp-content/uploads/2023/12/acer.jpeg`,
+            "https://securytik.com/wp-content/uploads/2023/12/intel-150x150.jpeg",
+            `https://securytik.com/wp-content/uploads/2023/12/lenovo.jpeg`,
+            `https://securytik.com/wp-content/uploads/2023/12/tplink.jpg`,
+            `https://securytik.com/wp-content/uploads/2023/12/dell.jpeg`,
+            `https://securytik.com/wp-content/uploads/2023/12/dlink.jpeg`
+          ].map(i=>{
             return  <Box key={i} sx={{width:{xs:'33%',sm:'15%',md:'15%'},maxWidth:'150px'}}>
             <Box>
               <img 
-               src="https://securytik.com/wp-content/uploads/2023/12/intel-150x150.jpeg" alt="" className="img" />
+               src={i} alt="" className="img" />
               </Box>
               
 

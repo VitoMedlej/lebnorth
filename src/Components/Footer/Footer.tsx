@@ -57,7 +57,7 @@ const Footer = () => (
             <li><Link href="/collection/products">All Products</Link></li> 
             <li><Link href="/terms-and-conditions">Terms & Conditions</Link></li>
             <li><Link href="/privacy-policy">Privacy Policy</Link></li>
-            <li><Link href="https://wa.me/+96170082014">Whatsapp Us</Link></li>
+            <li><Link href="https://wa.me/+9611234567">Whatsapp Us</Link></li>
           </ul>
      
           <ul  className='ul-white' style={{color:'black'}}>
