@@ -79,12 +79,12 @@ useEffect(()=>{
       <ListItem
           sx={{fontWeight:400}}
 
-          onClick={()=>{router.push(`/about`); toggleDrawer(false)}}
+          onClick={()=>{router.push(`/collection/products`); toggleDrawer(false)}}
            disablePadding>
             <ListItemButton>
             
                   <Typography component='h1' sx={{fontWeight:600}}>
-              Learn More
+                  Collection
             </Typography>
             </ListItemButton>
   
@@ -99,7 +99,7 @@ useEffect(()=>{
     id="panel1a-header"
   >
  <Typography component='h1' sx={{fontWeight:600}}>
- 5D Diy Kits
+ Gadgets
       </Typography>
   </AccordionSummary>
   <AccordionDetails>
@@ -112,7 +112,7 @@ useEffect(()=>{
 
 onClick={()=>
 {setOpen(false);
-router.push(`/5D DIY KITS/products`)}}
+router.push(`/Gadgets/products`)}}
 
 >
 
@@ -125,22 +125,16 @@ router.push(`/5D DIY KITS/products`)}}
 </ListItem>
 
 {[
-  "LANDSCAPES",
- 'PORTRAIT',
-
-  "NATURE",
-  "RELIGIOUS",
-  "KIDS & CARTOONS",
-  "TISSUE BOX",
-  "CUP COASTER",
-  "KEY CHAINS",
-  "DOUBLE MIRROR",
-  "PENCIL CASE"
+`Cases`,
+`Chargers`,
+`Cables`,
+`Headphones`,
+`Power Banks`
 ].map(i=>{   return  <ListItem sx={{padding:0,width:'100%'}}
 
 onClick={()=>
 {setOpen(false);
-router.push(`/5D DIY KITS/products?type=${encodeURIComponent(i).toLocaleLowerCase()}`)}}
+router.push(`/Gadgets/products?type=${encodeURIComponent(i).toLocaleLowerCase()}`)}}
 
 key={i}>
 
@@ -169,7 +163,7 @@ key={i}>
  <Typography component='h1' sx={{
   textTransform:'capitalize',
   fontWeight:600}}>
- Materials
+ Networking
       </Typography>
   </AccordionSummary>
   <AccordionDetails>
@@ -182,7 +176,7 @@ key={i}>
 
 onClick={()=>
 {setOpen(false);
-router.push(`/Materials/products`)}}
+router.push(`/Networking/products`)}}
 
 >
 
@@ -195,19 +189,16 @@ router.push(`/Materials/products`)}}
 </ListItem>
 
 {[  "SEALER BRIHTNER",
-  "OTHERS",
-  "BOXES & STORAGES",
-  "LED LIGHT PAD",
-  "CORRECTION & FENEL",
-  "CLIPS & MON-STICK PAPPER",
-  "LABEL NUMBER STICKERS",
-  "PLATE & ROLLER",
-  "PENS"
+`Routers`,
+`Switches`,
+`Modems`,
+`Network Security`,
+`Wireless Solutions`,
 ].map(i=>{   return  <ListItem sx={{padding:0,width:'100%'}}
 
 onClick={()=>
 {setOpen(false);
-router.push(`/Materials/products?type=${encodeURIComponent(i).toLocaleLowerCase()}`)}}
+router.push(`/Networking/products?type=${encodeURIComponent(i).toLocaleLowerCase()}`)}}
 
 key={i}>
 
@@ -231,7 +222,7 @@ key={i}>
         // `Craft Supplies`,
       //  `DIY Kits`,
       //  'MATERIELS',
-       `Customized`,
+       `Communication`,
       
        ].map(i=>{
               return    <ListItem
@@ -251,62 +242,6 @@ key={i}>
               </ListItem>
              })
           }
-
-      <ListItem
-          sx={{fontWeight:400}}
-
-          onClick={()=>{router.push(`/almost-done`); toggleDrawer(false)}}
-           disablePadding>
-            <ListItemButton>
-            
-                  <Typography component='h1' sx={{fontWeight:600}}>
-              Almost Done
-            </Typography>
-            </ListItemButton>
-  
-
-          </ListItem>
-
-          <ListItem
-          sx={{fontWeight:400}}
-
-          onClick={()=>{router.push(`/collection/products`); toggleDrawer(false)}}
-           disablePadding>
-            <ListItemButton>
-            
-                  <Typography component='h1' sx={{fontWeight:600}}>
-              All products
-            </Typography>
-            </ListItemButton>
-  
-
-          </ListItem>
-
-
-          <ListItem
-          sx={{fontWeight:400}}
-
-          onClick={()=>{router.push(`/#FEEDBACK`); toggleDrawer(false)}}
-           disablePadding>
-            <ListItemButton>
-            
-                  <Typography component='h1' sx={{fontWeight:600}}>
-              Feedback
-            </Typography>
-            </ListItemButton>
-  
-
-          </ListItem>
-    
-          
-       
-    
-       
-
-
-
-
-
 
 
 
