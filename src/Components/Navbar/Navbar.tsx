@@ -21,7 +21,7 @@ import SearchInput from './SearchInput';
 import NavButtom from './NavButtom';
 import { useCartContext, useDrawerContext, useLangContext } from '@/context/Contexts';
 import Btn from '../Btn/Btn';
-import useLanguage from '@/Hooks/useLanguage';
+// import useLanguage from '@/Hooks/useLanguage';
 
 
 
@@ -111,7 +111,7 @@ maxWidth:{xs:'100%',sm:'lg'}}}>
             <img src="https://www.svgrepo.com/show/520798/instagram.svg" alt="" className="img" />
                 </Box>
             <Typography sx={{color:'black',fontSize:'.70em',textAlign:'end',fontWeight:600}}>
-            @shineplus_carspa
+            @Leb_North
             </Typography>
             </Box>
             <a className='decor-none' href={`https://wa.me/${process.env.NEXT_PUBLIC_WA}`}>

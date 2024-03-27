@@ -64,7 +64,7 @@ import PreLoader from "@/Components/PreLoader"
 //  }
 const fetchDataAndSetImgs = async () => {
   const req = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-images`,
-  {next:{revalidate:100} })
+  {next:{revalidate:0} })
   let res = req &&  await req.json();
   if (res) return res?.Images
   return null;
