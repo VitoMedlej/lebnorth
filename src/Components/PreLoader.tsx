@@ -17,6 +17,7 @@ import SMicons from './SMicons/SMicons'
 
 const 
 PreLoader = ({data,resImages}:any) => {
+  console.log('resImages: ', resImages);
 
   const router= useRouter();
 
@@ -63,7 +64,7 @@ PreLoader = ({data,resImages}:any) => {
             Welcome to Leb North your IT and Technology Partner.
           </Typography>
         </Container>
-      <MainCarousel imgs={resImages}/>
+      <MainCarousel imgs={resImages?.data?.Images[0]?.imagesArray}/>
       <Container>
         <Typography sx={{fontSize:'.99em'}}>
         Explore the Latest in Tech Innovation at Leb North | Your Gateway to a Diverse Range of Gadgets, Gizmos, and Gear | Dive into Our Extensive Collection of Smartphones, Laptops, Gaming Consoles, and More | Elevate Your Digital Lifestyle with the Hottest Tech Trends | Find Your Perfect Tech Companion Today.
@@ -75,7 +76,7 @@ PreLoader = ({data,resImages}:any) => {
         Top Categories
         </Typography>
 
-        <Box sx={{mt:1}} className='flex cursor pointer wrap justify-between center text-center'>
+        <Box sx={{mt:1}} className='flex   wrap justify-between center text-center'>
           {[
 
             {
@@ -101,7 +102,7 @@ PreLoader = ({data,resImages}:any) => {
 
 
           ].map(i=>{
-            return  <Box key={i.title} sx={{width:{xs:'33%',sm:'32%',md:'22%'},maxWidth:'200px'}}>
+            return  <Box className='pointer cursor' key={i.title} sx={{width:{xs:'33%',sm:'32%',md:'22%'},maxWidth:'200px'}}>
             <Box>
               <img 
                src={`${i?.img}`}               

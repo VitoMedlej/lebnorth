@@ -13,6 +13,7 @@ import { Autoplay } from 'swiper';
 
 
 const Preloader3 = ({res}:{res:any}) => {
+    console.log('res: ', res);
     const router = useRouter()
  const [imgs,setImgs] = useState(
      [
@@ -21,12 +22,11 @@ const Preloader3 = ({res}:{res:any}) => {
   {img:`https://securytik.com/wp-content/uploads/2023/12/Banner1-2-1536x581.jpg`,position:'topd'},
 ]
 )
-console.log('imgs: ', imgs);
 useEffect(() => {
   
 
-    if (res && res?.MainCarousel) {
-        setImgs(res?.MainCarousel)
+    if (res) {
+        setImgs(res)
     }
 }, [])
 

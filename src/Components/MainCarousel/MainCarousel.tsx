@@ -3,7 +3,6 @@
 import Preloader3 from '../Preloader3';
 
 const MainCarousel = ({imgs}: any) => {
-  console.log('imgs: ', imgs);
 
 
 

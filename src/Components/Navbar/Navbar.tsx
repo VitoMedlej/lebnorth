@@ -90,7 +90,7 @@ maxWidth:{xs:'100%',sm:'lg'}}}>
             <img src="https://www.svgrepo.com/show/533285/phone.svg" alt="" className="img" />
                 </Box>
             <Typography sx={{color:'black',fontSize:'.70em',textAlign:'end',fontWeight:600}}>
-            +961 1 234 567
+            +961 03 981 213
             </Typography>
             </Box>
             <Box className='flex row items-center'>
@@ -115,9 +115,11 @@ maxWidth:{xs:'100%',sm:'lg'}}}>
             </Typography>
             </Box>
             <a className='decor-none' href={`https://wa.me/${process.env.NEXT_PUBLIC_WA}`}>
-            <Btn sx={{display:{xs:'none',sm:'flex'},py:.2}}>
+            <Btn sx={{
+                color:'green',
+                display:{xs:'none',sm:'flex'},py:.2}}>
                                          
-                                    BOOK NOW
+                                    Whatsapp
                                   </Btn>
       </a>                        
        
