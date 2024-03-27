@@ -17,9 +17,9 @@ const Preloader3 = ({res}:{res:any}) => {
     const router = useRouter()
  const [imgs,setImgs] = useState(
      [
-     {img:'https://securytik.com/wp-content/uploads/2023/12/banner-3-1536x581.jpg',position:'centerd'},
-  {img:'https://securytik.com/wp-content/uploads/2023/12/banner-4-1536x581.jpg',position:'topd'},
-  {img:`https://securytik.com/wp-content/uploads/2023/12/Banner1-2-1536x581.jpg`,position:'topd'},
+    //  {img:'https://securytik.com/wp-content/uploads/2023/12/banner-3-1536x581.jpg',position:'centerd'},
+//   {img:'https://securytik.com/wp-content/uploads/2023/12/banner-4-1536x581.jpg',position:'topd'},
+//   {img:`https://securytik.com/wp-content/uploads/2023/12/Banner1-2-1536x581.jpg`,position:'topd'},
 ]
 )
 useEffect(() => {
@@ -65,7 +65,7 @@ useEffect(() => {
                 modules={[Autoplay]}
                 className="mySwiper swiper">
     
-                {imgs  && imgs?.map((item) => {
+                {imgs  && imgs?.map((item:any) => {
     
                     return <SwiperSlide 
                      
@@ -82,7 +82,7 @@ useEffect(() => {
                                 className={`img contain  ${item?.position} 
                                 `}
                                 // ${item?.className}
-                                src={`${item.img}`}
+                                src={`${item?.img}`}
                                 alt="Main Carousel Image"/>
            
                         </Box>
