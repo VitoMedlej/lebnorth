@@ -2,6 +2,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import NextNProgress from 'nextjs-progressbar';
 import { loadState, saveState } from "@/Utils/LocalstorageFn";
+import useCategories from "@/Hooks/useCategories";
 
 
 export const DrawerContext = createContext < any > ({});
@@ -19,8 +20,8 @@ export const LangContext = createContext < any > ('en');
             setOpen] = useState(false);
         const [cartOpen,
             setCartOpen] = useState(false);
-            const [cates,
-                setCates] = useState([]);
+            const categories = useCategories()
+        
                 const [lang,
                     setLang] = useState('en');
                         // Load language from localStorage on component mount
@@ -38,7 +39,8 @@ export const LangContext = createContext < any > ('en');
             return (
                 
                 <DrawerContext.Provider value={{open,setOpen}}>
-        <Categories.Provider value={{cates, setCates}}>
+              <Categories.Provider value={{categories}}>
+
             
         <CartContext.Provider value={{cartOpen, setCartOpen}}>
         <LangContext.Provider value={{lang, setLang}}>

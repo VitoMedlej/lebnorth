@@ -9,28 +9,30 @@ import MenuHover from './MenuHover'
 
 
 
-const NavButtom = () => {
+const NavButtom = ({categories}:any) => {
+    console.log('categories: ', categories);
+    
 
   return (
     <Box
-        className=' wrap  space-evenly'
+    className=' wrap  space-evenly'
+    sx={{
+        flex:1,
+        position:'relative',
+    // width: '100%',
+    mx: 0,
+    display : {xs:'none',md:'flex'}
+}}>
+    <Container
+        className='flex   '
         sx={{
-            flex:1,
-            position:'relative',
-        // width: '100%',
-        mx: 0,
-        display : {xs:'none',md:'flex'}
-    }}>
-        <Container
-            className='flex   '
-            sx={{
-            justifyContent: 'flex-start',
-            maxWidth: 'lg',
-            overflow:'hidden',
-            py:1.5,
+        justifyContent: 'flex-start',
+        maxWidth: 'lg',
+        overflow:'hidden',
+        py:1.5,
 
-        }}>
-{/* <Link className=' decor-none uppercase' href={`/collection/products`}>
+    }}>
+{/* <Link className=' decor-none uppercase' href={`/collections/products`}>
                     <Typography  component='p' sx={{width:'max-content',fontWeight:400,fontSize:{xs:'.7em',sm:'.85em'}}}>
                     Sale
                     </Typography>
@@ -48,69 +50,182 @@ fontWeight:500,fontSize:{xs:'.86em',sm:'.95em'}}}>
 Collection
 </Typography>
 </Link>
-                  <Link className='black decor-none ' href={`/about`}>
+{/* <Link className='white decor-none ' href={`/#shop`}>
 
 <Typography 
-className=' cursor center flex gap1 black decor-none captialize'
-id="button"
+className=' cursor center flex gap1 white decor-none captialize'
+
 component='h1' sx={{width:'max-content',
 mx:'1em',
 alignItems: 'center',
 
 fontWeight:500,fontSize:{xs:'.86em',sm:'.95em'}}}>
-Gadgets
-
-
+Shop
 </Typography>
-</Link>
-<MenuHover img='' category={'Accessories'} subcategories={[  
-`Cases`,
-`Chargers`,
-`Cables`,
-`Headphones`,
-`Power Banks`
-]}/>
-
-<MenuHover img='' category={'Networking'} subcategories={[  "SEALER BRIHTNER",
-`Routers`,
-`Switches`,
-`Modems`,
-`Network Security`,
-`Wireless Solutions`,
-]}/>
-
-
+</Link> */}
 {
-    [   
-        // `Craft Supplies`,
-    // `5D DIY Kits`,
-    // 'MATERIELS',
-    `Communication`,
-   
-    ].map(i=>{
+    categories && categories.map((cate:any)=>{
+        console.log('cate: ', cate?.cateArray[0]?.categoryName);
+            // if (cate?.subcategories?.length == 0){ return      <Link 
+                if (cate?.cateArray[0]?.subcategories?.length === 0){ return      <Link 
+            key={cate?.cateArray[0]?.categoryName} className='black decor-none'
+             href={`/${cate?.cateArray[0]?.categoryName?.toLocaleLowerCase()}/products`}>
+
+<Typography 
+className=' cursor center flex gap1 black decor-none captialize'
+
+component='h1' sx={{width:'max-content',
+mx:'1em',
+alignItems: 'center',
+
+fontWeight:500,fontSize:{xs:'.86em',sm:'.95em'}}}>
+{`${cate?.cateArray[0]?.categoryName}`}
+</Typography>
+</Link>}
+        
+            else {
+
+                return <MenuHover key={cate?.cateArray[0]?.categoryName}
+                img={'https://irrelevantlvng.com/img/cms/IMG_1323.JPG'}
+                category={`${cate?.cateArray[0]?.categoryName}`} subcategories={cate?.cateArray[0]?.subcategories && cate?.cateArray[0]?.subcategories?.length > 0 ? cate?.cateArray[0]?.subcategories : []} />
+            }
+          
+    })
+}
+{/* <MenuHover img={'https://irrelevantlvng.com/img/cms/IMG_1323.JPG'} category={'Shop'} subcategories={['test','tes1']} /> */}
+
+{/* <MenuHover img={'https://irrelevantlvng.com/img/cms/IMG_1323.JPG'} category={'collections'} subcategories={['22','33']} /> */}
+
+
+{/* <Link className='black decor-none ' href={`/about`}>
+
+<Typography 
+className=' cursor center flex gap1 black decor-none captialize'
+
+component='h1' sx={{width:'max-content',
+mx:'1em',
+alignItems: 'center',
+
+fontWeight:500,fontSize:{xs:'.86em',sm:'.95em'}}}>
+About US
+</Typography>
+</Link> */}
+
+{/* {
+    // [  `Oversized Outfits`,
+    //     `Casual Comfort`,
+    //     `Sporty Streets`,
+    //     `Trendy Threads`]
+            [
+                
+                // 'collections',
+            // `Casual Comfort`,
+            // `Sporty Streets`,
+        ]
+            .map(i=>{
         return <Link key={i} className='black decor-none ' href={`/${i.toLocaleLowerCase()}/products`}>
 
         <Typography 
         component='h1'
         className=' cursor center flex gap1 black decor-none captialize'
-        id="button"
+        
         sx={{width:'max-content',
         mx:'1em',
         alignItems: 'center',
         fontWeight:500,fontSize:{xs:'.86em',sm:'.95em'}}}>
-        {i}
+        {i.toUpperCase()}
         </Typography>
         </Link>
     })
-}
+} */}
+
+{/* <Link className='white decor-none ' href={`/organic herbs/products`}>
+
+<Typography 
+className=' cursor center flex gap1 white decor-none captialize'
+
+component='p' sx={{width:'max-content',
+mx:'1em',
+alignItems: 'center',
+
+fontWeight:500,fontSize:{xs:'.86em',sm:'.95em'}}}>
+Organic Herbs
+</Typography>
+</Link>
+<Link className='white decor-none ' href={`/natural supplements/products`}>
+
+<Typography 
+className=' cursor center flex gap1 white decor-none captialize'
+
+component='p' sx={{width:'max-content',
+mx:'1em',
+alignItems: 'center',
+
+fontWeight:500,fontSize:{xs:'.86em',sm:'.95em'}}}>
+Natural Supplements
+</Typography>
+</Link> */}
 
 
 
+{/* <Link className='white decor-none ' href={`/about`}>
 
+<Typography 
+className=' cursor center flex gap1 white decor-none '
+
+component='p' sx={{width:'max-content',
+mx:'1em',
+alignItems: 'center',
+
+fontWeight:500,fontSize:{xs:'.86em',sm:'.95em'}}}>
+About Us
+</Typography>
+</Link> */}
+
+{/* <Link className='white decor-none uppercase' href={`/new-arrivals/products`}>
+
+<Typography 
+className=' cursor center flex gap1 white decor-none uppercase'
+
+component='p' sx={{width:'max-content',
+alignItems: 'center',
+mx:'1em',
+
+fontWeight:600,fontSize:{xs:'.6em',sm:'.75em'}}}>
+New Arrivals
+</Typography>
+</Link> */}
+                {/* <Link className='white decor-none uppercase' href={`/birds/products`}>
+
+                <Typography 
+      className=' cursor center flex gap1 white decor-none uppercase'
+        
+        component='p' sx={{width:'max-content',
+        mx:'1em',
+        alignItems: 'center',
+        
+        fontWeight:600,fontSize:{xs:'.6em',sm:'.75em'}}}>
+     Birds
+   </Typography>
+   </Link> */}
+           
+
+            {/* { [
+    {cate:"Categories",subCate:catsSubcategories,img:`https://th.bing.com/th/id/R.1776ae53615a64b359d8d65cf5eca544?rik=WKeDBh1pbwPftA&riu=http%3a%2f%2fwww.kmart.com.au%2fwcsstore%2fKmart%2fimages%2fespots%2fpets-beds-050418-tall-banner.jpg&ehk=fwMSwpMwGOLad6eRmrG%2bT48oAdH2G7Y8Mm2thOjl3Zk%3d&risl=&pid=ImgRaw&r=0`},
+    // {cate:"Dogs",subCate:dogsSubcategories,img:`https://mypetguru.com/imgs/uploads/toy-for-dog.jpg`},
+    // {cate:"Offers",subCate:offersSubcategories,img:'https://i.pinimg.com/originals/bf/cb/59/bfcb59f20bddc43101e39de2cc142f7e.jpg'}
+].map(i => {
+                // return <Link className='clr decor-none uppercase' key={i} href={`/${i.replace(/ /g, '-').toLocaleLowerCase()}/products`}>
+                //     <Typography  component='p' sx={{width:'max-content',fontWeight:600,fontSize:{xs:'.6em',sm:'.75em'}}}>                    
+                //     {i}
+                //     </Typography>
+                // </Link>
+                return  <MenuHover img={i.img} key={i.cate} category={i.cate} subcategories={i.subCate}/>
+            })} */}
 
 
         </Container>
-
+        {/* <MenuHover category='HOVER HERE' subcategories={['test','test2']}/> */}
     </Box>
   )
 }

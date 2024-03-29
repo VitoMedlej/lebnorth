@@ -19,17 +19,13 @@ import {AiOutlineHome,AiOutlineShoppingCart} from 'react-icons/ai'
 import SearchInput from './SearchInput';
 
 import NavButtom from './NavButtom';
-import { useCartContext, useDrawerContext, useLangContext } from '@/context/Contexts';
+import { useCartContext, useCategoriesContext, useDrawerContext, useLangContext } from '@/context/Contexts';
 import Btn from '../Btn/Btn';
 // import useLanguage from '@/Hooks/useLanguage';
 
 
 
-export const categories =  [`Craft Supplies`,
-`DIY Kits`,
-`customized`,
 
-`Home Decor`];
 export default function Navbar() {
     const {open, setOpen} = useDrawerContext();
     const [openModal,
@@ -40,6 +36,9 @@ export default function Navbar() {
 
     const {cartOpen, setCartOpen} = useCartContext();
     const router = useRouter()
+    const {categories} = useCategoriesContext();
+
+
     // const localCart = [1]
     useEffect(() => {
         const cart : any = []
@@ -270,7 +269,8 @@ mobile
 <SearchModal openModal={openModal} setOpenModal={setOpenModal }/>
              
             </Toolbar>
-<NavButtom/>
+            <NavButtom categories={categories}/>
+
 
         </AppBar>
     </Box> 

@@ -14,10 +14,12 @@ import useLanguage from '@/Hooks/useLanguage'
 import ContactSection from './ContactSection/ContactSection'
 import HomeProductsCarousel from './HomeProductsCarousel/HomeProductsCarousel'
 import SMicons from './SMicons/SMicons'
+import { useCategoriesContext } from '@/context/Contexts'
 
 const 
 PreLoader = ({data,resImages}:any) => {
-  console.log('resImages: ', resImages);
+  const {categories} = useCategoriesContext();
+  console.log('categories: ', categories);
 
   const router= useRouter();
 
@@ -77,40 +79,46 @@ PreLoader = ({data,resImages}:any) => {
         </Typography>
 
         <Box sx={{mt:1}} className='flex   wrap justify-between center text-center'>
-          {[
+          {
+          categories && categories
+//           [
 
-            {
-              title:`Computer`,
-              img:`https://securytik.com/wp-content/uploads/2023/12/2023-12-10-00_16_20-Computer-Icons-Logos-Symbols-%E2%80%93-Free-Download-PNG-SVG-%E2%80%94-Mozilla-Firefox-300x300.png`,
-            },
-            {
-              title:`Network`,
-              img:`https://securytik.com/wp-content/uploads/2023/12/2023-12-10-00_00_38--300x300.png`
-},
-{
-  title:`Storage`,
-  img:`https://securytik.com/wp-content/uploads/2023/12/2023-12-10-00_14_42-Hard-disk-Icons-Logos-Symbols-%E2%80%93-Free-Download-PNG-SVG-%E2%80%94-Mozilla-Firefox-300x300.png`
-},
-{
-  title:`Server`,
-  img:`https://securytik.com/wp-content/uploads/2023/12/2023-12-10-00_11_12-Server-Icons-Logos-Symbols-%E2%80%93-Free-Download-PNG-SVG-%E2%80%94-Mozilla-Firefox-300x300.png`
-},
-{
-  title:`Boards`,
-  img:`https://securytik.com/wp-content/uploads/2023/12/2023-12-09-23_57_47-Electronic-board-Icons-Logos-Symbols-%E2%80%93-Free-Download-PNG-SVG-%E2%80%94-Mozilla-Firefo-300x300.png`
-},
+//             {
+//               title:`Computer`,
+//               img:`https://securytik.com/wp-content/uploads/2023/12/2023-12-10-00_16_20-Computer-Icons-Logos-Symbols-%E2%80%93-Free-Download-PNG-SVG-%E2%80%94-Mozilla-Firefox-300x300.png`,
+//             },
+//             {
+//               title:`Network`,
+//               img:`https://securytik.com/wp-content/uploads/2023/12/2023-12-10-00_00_38--300x300.png`
+// },
+// {
+//   title:`Storage`,
+//   img:`https://securytik.com/wp-content/uploads/2023/12/2023-12-10-00_14_42-Hard-disk-Icons-Logos-Symbols-%E2%80%93-Free-Download-PNG-SVG-%E2%80%94-Mozilla-Firefox-300x300.png`
+// },
+// {
+//   title:`Server`,
+//   img:`https://securytik.com/wp-content/uploads/2023/12/2023-12-10-00_11_12-Server-Icons-Logos-Symbols-%E2%80%93-Free-Download-PNG-SVG-%E2%80%94-Mozilla-Firefox-300x300.png`
+// },
+// {
+//   title:`Boards`,
+//   img:`https://securytik.com/wp-content/uploads/2023/12/2023-12-09-23_57_47-Electronic-board-Icons-Logos-Symbols-%E2%80%93-Free-Download-PNG-SVG-%E2%80%94-Mozilla-Firefo-300x300.png`
+// },
 
-
-          ].map(i=>{
-            return  <Box className='pointer cursor' key={i.title} sx={{width:{xs:'33%',sm:'32%',md:'22%'},maxWidth:'200px'}}>
+//           ]
+          
+          .map((i:any)=>{
+            return  <Box
+            onClick={()=>router.push(`/${i?.cateArray[0].categoryName?.toLowerCase()}/products`)}
+            className='pointer cursor'
+             key={i?.cateArray[0].categoryName} sx={{width:{xs:'33%',sm:'32%',md:'22%'},maxWidth:'200px'}}>
             <Box>
               <img 
-               src={`${i?.img}`}               
+               src=             {`${i?.cateArray[0].img}`}             
                alt="" className="img" />
               </Box>
               
               <Typography sx={{fontWeight:700}}>
-                {i.title}
+             {i?.cateArray[0].categoryName}
               </Typography>
 
             </Box>

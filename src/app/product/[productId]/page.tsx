@@ -35,7 +35,6 @@ const Index = () => {
       product : null,
       moreProducts : []
     })
-    console.log('data: ', data);
     
     
     const [selectedSize, setselectedSize] = useState({size:'',price:''});

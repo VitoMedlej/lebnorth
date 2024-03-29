@@ -15,7 +15,6 @@ try {
     .find({})
     .limit(20)
     .toArray()
-    console.log('featuredProductsQuery: ', Images);
 
     if (!Images) {
         return NextResponse.json({success: false});

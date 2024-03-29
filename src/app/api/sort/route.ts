@@ -64,8 +64,6 @@ export async function GET(req :NextRequest , res : NextApiResponse) {
         || category== 'All' 
         || category?.toLocaleLowerCase() == 'category' ? null : `${category}`.toLocaleLowerCase()
         let filterByType = !type || type === null || type == 'All'  || type == 'all' || type == 'null' || type?.toLocaleLowerCase() == 'all' || type == 'collection'  ? null : `${decodeURIComponent(type)}`.toLocaleLowerCase()
-        console.log('filterByType: ', filterByType);
-        console.log('filterByCate: ', filterByCate);
         
     const ProductsCollection = await client
         .db("LEB")

@@ -90,7 +90,6 @@ export async function GET(req : NextRequest, res : NextApiResponse) {
       }
     }
     const countQuery = await ProductsCollection.count(filterQuery());
-    console.log('filterQuery: ', filterQuery());
     
     const totalPages = Number(Math.ceil(countQuery / pageSize)); // Total number of pages
     const skip = Number(page) * 12
