@@ -65,32 +65,30 @@ Shop
 </Link> */}
 {
     categories && categories.map((cate:any)=>{
-        console.log('cate: ', cate?.cateArray[0]?.categoryName);
-            // if (cate?.subcategories?.length == 0){ return      <Link 
-                if (cate?.cateArray[0]?.subcategories?.length === 0){ return      <Link 
-            key={cate?.cateArray[0]?.categoryName} className='black decor-none'
-             href={`/${cate?.cateArray[0]?.categoryName?.toLocaleLowerCase()}/products`}>
-
-<Typography 
-className=' cursor center flex gap1 black decor-none captialize'
-
-component='h1' sx={{width:'max-content',
-mx:'1em',
-alignItems: 'center',
-
-fontWeight:500,fontSize:{xs:'.86em',sm:'.95em'}}}>
-{`${cate?.cateArray[0]?.categoryName}`}
-</Typography>
-</Link>}
-        
-            else {
-
-                return <MenuHover key={cate?.cateArray[0]?.categoryName}
-                img={'https://irrelevantlvng.com/img/cms/IMG_1323.JPG'}
-                category={`${cate?.cateArray[0]?.categoryName}`} subcategories={cate?.cateArray[0]?.subcategories && cate?.cateArray[0]?.subcategories?.length > 0 ? cate?.cateArray[0]?.subcategories : []} />
-            }
-          
-    })
+        return cate?.cateArray.map((item:any, index:number)=>{
+      
+          if (item?.subcategories?.length === 0){ 
+            return <Link 
+              key={item?.categoryName} className='black decor-none'
+              href={`/${item?.categoryName?.toLocaleLowerCase()}/products`}>
+      
+              <Typography 
+              className=' cursor center flex gap1 black decor-none captialize'
+              component='h1' sx={{width:'max-content',
+              mx:'1em',
+              alignItems: 'center',
+              fontWeight:500,fontSize:{xs:'.86em',sm:'.95em'}}}>
+              {`${item?.categoryName}`}
+              </Typography>
+            </Link>
+          } else {
+            return <MenuHover key={item?.categoryName}
+            img={'https://irrelevantlvng.com/img/cms/IMG_1323.JPG'}
+            category={`${item?.categoryName}`} subcategories={item?.subcategories && item?.subcategories?.length > 0 ? item?.subcategories : []} />
+          }
+        })
+      })
+      
 }
 {/* <MenuHover img={'https://irrelevantlvng.com/img/cms/IMG_1323.JPG'} category={'Shop'} subcategories={['test','tes1']} /> */}
 

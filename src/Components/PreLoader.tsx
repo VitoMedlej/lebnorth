@@ -107,22 +107,32 @@ PreLoader = ({data,resImages}:any) => {
 //           ]
           
           .map((i:any)=>{
-            return  <Box
-            onClick={()=>router.push(`/${i?.cateArray[0].categoryName?.toLowerCase()}/products`)}
-            className='pointer cursor'
-             key={i?.cateArray[0].categoryName} sx={{width:{xs:'33%',sm:'32%',md:'22%'},maxWidth:'200px'}}>
-            <Box>
-              <img 
-               src=             {`${i?.cateArray[0].img}`}             
-               alt="" className="img" />
-              </Box>
-              
-              <Typography sx={{fontWeight:700}}>
-             {i?.cateArray[0].categoryName}
-              </Typography>
 
-            </Box>
-          })}
+           return i?.cateArray.map((item:any, index:number)=>{
+
+              return  <Box
+              onClick={()=>router.push(`/${item.categoryName?.toLowerCase()}/products`)}
+              className='pointer cursor'
+               key={item.categoryName} sx={{width:{xs:'33%',sm:'32%',md:'22%'},maxWidth:'200px'}}>
+              <Box>
+                <img 
+                 src=             {`${item.img}`}             
+                 alt="" className="img" />
+                </Box>
+                
+                <Typography sx={{fontWeight:700}}>
+               {item.categoryName}
+                </Typography>
+          
+              </Box>
+            }
+            
+            )
+          }
+          
+          )
+          
+          }
         </Box>
       </Container>
       <HomeProductCollection  products={data}/>
