@@ -156,7 +156,7 @@ maxWidth:{xs:'100%',sm:'lg'}}}>
     <img
         className='img'
         src={`https://ucarecdn.com/0f2afae9-efff-4c52-b21d-61b31fb19f75/logopng.jpg`}
-        alt="diy_crafts_diamond_painting logo"/>
+        alt="Leb_North logo"/>
 </Box>
 </Link>
 

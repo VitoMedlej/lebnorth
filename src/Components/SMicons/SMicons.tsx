@@ -8,10 +8,10 @@ import React from 'react'
 const sm = [
     {
         Icon:'https://www.svgrepo.com/show/520798/instagram.svg',
-        href:'https://www.instagram.com/diy_crafts_diamond_paintinglb?igsh=MXFreTZkbGI5ejlteA%3D%3D&utm_source=qr'
+        href:'https://www.instagram.com/Leb_Northlb?igsh=MXFreTZkbGI5ejlteA%3D%3D&utm_source=qr'
     },
     {Icon:'https://www.svgrepo.com/show/506628/whatsapp.svg',href:'https://wa.me/+96103981213'},
-    // {Icon:'https://www.svgrepo.com/show/494202/facebook.svg',href:'https://www.facebook.com/diy_crafts_diamond_paintinglb?mibextid=LQQJ4d'},
+    // {Icon:'https://www.svgrepo.com/show/494202/facebook.svg',href:'https://www.facebook.com/Leb_Northlb?mibextid=LQQJ4d'},
   
  ]
 const SMicons = ({sx,color}:{color?:string,sx?:any}) => {
