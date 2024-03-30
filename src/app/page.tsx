@@ -64,7 +64,7 @@ import PreLoader from "@/Components/PreLoader"
 //  }
 const fetchDataAndSetImgs = async () => {
   const req = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-images`,
-  {next:{revalidate:0} })
+  {cache: 'no-store',next:{revalidate:0} })
   let res = req &&  await req.json();
   if (res?.success && res?.data?.Images) return res
   return null;
@@ -75,7 +75,7 @@ const fetchDataAndSetImgs = async () => {
 // }, [])
 try {
 
-  const req = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-data`,{ next: { revalidate: 0 } })
+  const req = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-data`,{ cache: 'no-store',next: { revalidate: 0 } })
   // const req = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-data`,{ cache: 'no-store',next:{revalidate:0} })
   // const req = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/get-data`)
   let res = req &&  await req.json();

@@ -25,7 +25,7 @@ const useCategories = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        // cache: 'no-store',
+        cache: 'no-store',
   next: {
     revalidate: 0
   }
