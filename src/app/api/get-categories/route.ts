@@ -28,3 +28,5 @@ export async function GET(req : NextRequest, res : NextApiResponse) {
 return NextResponse.json(null);
     // return res.status(200).send(products)
 }
+
+export const dynamic = 'force-dynamic'
