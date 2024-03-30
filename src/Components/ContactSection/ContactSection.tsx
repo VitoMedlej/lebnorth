@@ -2,8 +2,7 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 
-
-
+import { FaFacebook } from "react-icons/fa";
 import {AiOutlineWhatsApp,AiOutlineInstagram} from 'react-icons/ai'
 // import EmailInput from './EmailInput'
 const Perks = () => {
@@ -63,7 +62,7 @@ const Perks = () => {
                             alignItems: 'center',
                             justifyContent: 'center'
                         }}>
-                        {<a className='black' target={`_blank`} rel='noreferrer' style={{textDecoration:"none"}} href={"https://www.instagram.com/Leb_North/?utm_source=qr&igsh=MXF1ZDhsMmk5dGl4eA%3D%3D"}>
+                        {<a className='black' target={`_blank`} rel='noreferrer' style={{textDecoration:"none"}} href={"https://www.instagram.com/lebanorth/"}>
 
 
                             <Typography
@@ -76,6 +75,40 @@ const Perks = () => {
                     </Box>
 
                 </Box>
+
+
+
+
+                <Box
+
+sx={{
+    display: 'flex',
+    gap: '.5em',
+    alignItems: 'center',
+    flexDirection: 'row'
+}}>
+<Box className='flexed'>
+    <FaFacebook   />
+</Box>
+<Box
+    sx={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+    }}>
+    {<a className='black' target={`_blank`} rel='noreferrer' style={{textDecoration:"none"}} href={"https://www.facebook.com/profile.php?id=61556149410233"}>
+
+
+        <Typography
+            sx={{
+                fontSize: '1.1em'
+            }}>Facebook</Typography>
+    </a>
+
+    }
+</Box>
+
+</Box>
 
 
 {/* 
