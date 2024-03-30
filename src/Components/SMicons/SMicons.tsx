@@ -16,7 +16,7 @@ const sm = [
 
     },
     {Icon:'https://www.svgrepo.com/show/506628/whatsapp.svg',href:'https://wa.me/+96103981213'},
-    // {Icon:'https://www.svgrepo.com/show/494202/facebook.svg',href:'https://www.facebook.com/Leb_Northlb?mibextid=LQQJ4d'},
+    // {Icon:'https://www.svgrepo.com/show/494202/facebook.svg',href:'https://www.facebook.com/lebanorthlb?mibextid=LQQJ4d'},
   
  ]
 const SMicons = ({sx,color}:{color?:string,sx?:any}) => {

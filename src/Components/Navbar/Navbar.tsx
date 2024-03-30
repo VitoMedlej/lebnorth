@@ -110,7 +110,7 @@ maxWidth:{xs:'100%',sm:'lg'}}}>
             <img src="https://www.svgrepo.com/show/520798/instagram.svg" alt="" className="img" />
                 </Box>
             <Typography sx={{color:'black',fontSize:'.70em',textAlign:'end',fontWeight:600}}>
-            @Leb_North
+            @lebanorth
             </Typography>
             </Box>
             <a className='decor-none' href={`https://wa.me/${process.env.NEXT_PUBLIC_WA}`}>
@@ -156,7 +156,7 @@ maxWidth:{xs:'100%',sm:'lg'}}}>
     <img
         className='img'
         src={`https://ucarecdn.com/0f2afae9-efff-4c52-b21d-61b31fb19f75/logopng.jpg`}
-        alt="Leb_North logo"/>
+        alt="lebanorth logo"/>
 </Box>
 </Link>
 
