@@ -156,7 +156,7 @@ key={i}>
 
 
 {categories && categories[0] && categories[0].cateArray && categories[0]?.cateArray?.map((category:any) => (
-  <Accordion sx={{border:'none',boxShadow:'none'}}>
+  <Accordion key={`${category?.categoryName}`} sx={{border:'none',boxShadow:'none'}}>
     <AccordionSummary
       expandIcon={<AiOutlineArrowUp />}
       aria-controls="panel1a-content"
@@ -166,7 +166,7 @@ key={i}>
         textTransform:'capitalize',
         fontWeight:600
       }}>
-        {category.categoryName}
+        {`${category?.categoryName}`}
       </Typography>
     </AccordionSummary>
     <AccordionDetails>
@@ -174,7 +174,7 @@ key={i}>
         <ListItem sx={{padding:0,width:'100%'}}
           onClick={()=>{
             setOpen(false);
-            router.push(`/${encodeURIComponent(category.categoryName)}/products`)
+            router.push(`/${encodeURIComponent(category?.categoryName)}/products`)
           }}
         >
           <ListItemButton>
@@ -183,8 +183,10 @@ key={i}>
             </Typography>
           </ListItemButton>
         </ListItem>
-        {category.subcategories.length > 0 && category.subcategories.map((subcategory:any) => (
-          <ListItem sx={{padding:0,width:'100%'}}
+        {category?.subcategories?.length > 0 && category?.subcategories.map((subcategory:any) => (
+          <ListItem
+          
+          sx={{padding:0,width:'100%'}}
             onClick={()=>{
               setOpen(false);
               router.push(`/${encodeURIComponent(category?.categoryName)}/products?type=${encodeURIComponent(subcategory?.name).toLocaleLowerCase()}`)
