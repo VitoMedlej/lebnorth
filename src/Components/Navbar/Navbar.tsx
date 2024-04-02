@@ -86,7 +86,7 @@ maxWidth:{xs:'100%',sm:'lg'}}}>
             <Box className='flex row items-center'>
                 <Box sx={{pr:.1,height:'20px'}}>
 
-            <img src="https://www.svgrepo.com/show/533285/phone.svg" alt="" className="img" />
+            <img src="https://www.svgrepo.com/show/533285/phone.svg" alt="" className="img mh-20" />
                 </Box>
             <Typography sx={{color:'black',fontSize:'.70em',textAlign:'end',fontWeight:600}}>
             +961 03 981 213
@@ -95,7 +95,7 @@ maxWidth:{xs:'100%',sm:'lg'}}}>
             <Box className='flex row items-center'>
                 <Box sx={{pr:.1,height:'20px'}}>
 
-            <img src="https://cdn-icons-png.flaticon.com/128/535/535239.png" alt="" className="img" />
+            <img src="https://cdn-icons-png.flaticon.com/128/535/535239.png" alt="" className="img mh-20" />
                 </Box>
             <Typography sx={{color:'black',fontSize:'.70em',textAlign:'end',fontWeight:600}}>
             Beirut | Lebanon
@@ -107,7 +107,7 @@ maxWidth:{xs:'100%',sm:'lg'}}}>
             <Box className='flex row items-center'>
                 <Box sx={{pr:.1,height:'20px'}}>
 
-            <img src="https://www.svgrepo.com/show/520798/instagram.svg" alt="" className="img" />
+            <img src="https://www.svgrepo.com/show/520798/instagram.svg" alt="" className="img mh-20" />
                 </Box>
             <Typography sx={{color:'black',fontSize:'.70em',textAlign:'end',fontWeight:600}}>
             @lebanorth

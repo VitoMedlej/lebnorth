@@ -39,6 +39,10 @@ h1 {
   justify-content: space-around;
 }
 
+.mh-20 {
+  max-width: 20px !important;
+}
+
 .img {
   -o-object-fit: cover;
      object-fit: cover;
