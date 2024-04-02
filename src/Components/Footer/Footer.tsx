@@ -70,7 +70,7 @@ const Footer = () => (
               </li>
             {/* <li><Link href="mailto:sales@thecraftroom-lb.com">sales@petstown.com</Link></li> */}
             
-            <li><a href="https://www.facebook.com/profile.php?id=61556149410233" target="_blank" rel="noreferrer" >Facebook</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61557575804164" target="_blank" rel="noreferrer" >Facebook</a></li>
 
             <li><a href="https://www.instagram.com/lebanorth/" target="_blank" rel="noreferrer" >@lebanorth</a></li>
             <li><a href={`https://wa.me/${process.env.NEXT_PUBLIC_WA}`}
