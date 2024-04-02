@@ -44,7 +44,7 @@ component={'h1'}
     padding:.5,
     fontWeight: '900'
 }}>
- Diamond Painting is easy and fun!
+    {`Explore LebNorth's Latest Products`} 
 </Typography>
 <Typography
 component={'p'}
@@ -58,14 +58,14 @@ component={'p'}
     padding:.5,
     fontWeight: '300'
 }}>
-Relax and unwind as you seamlessly create your own stunning diamond art.
+View our best and newest products
 </Typography>
 
 <Btn 
 sx={{width:'fit-content',border:'1px solid #eef6f9 ',mt:1,mx:'auto'}}
 onClick={()=>router.push('/collection/products')}
 >
-   Explore More
+   View More
 </Btn>
 </Box>
             

@@ -1,25 +1,26 @@
 "use client";
 import {useContext, useEffect, useState} from 'react';
 import {Drawer,List,Divider,ListItem,ListItemButton,ListItemText,ListItemIcon,Box, Typography, Accordion, AccordionDetails, AccordionSummary} from '@mui/material';
-import {IoShirtOutline,IoShirtSharp} from 'react-icons/io5';
+// import {IoShirtOutline,IoShirtSharp} from 'react-icons/io5';
 import { IconButton } from '@mui/material';
-import {AiOutlineHeart} from 'react-icons/ai'
+// import {AiOutlineHeart} from 'react-icons/ai'
 
 import { useRouter } from 'next/navigation';
 import {AiOutlineArrowUp} from 'react-icons/ai';
 
-import { DrawerContext } from '@/context/Contexts';
+import { DrawerContext, useCategoriesContext } from '@/context/Contexts';
 import {GrFormClose} from 'react-icons/gr'
-import SMicons from '../SMicons/SMicons';
+// import SMicons from '../SMicons/SMicons';
 // import { categories } from '../Navbar/Navbar';
-import Btn from '../Btn/Btn';
-import Link from 'next/link';
+// import Btn from '../Btn/Btn';
+// import Link from 'next/link';
 
 
-export default function TemporaryDrawer({cates}:{cates:string[] | undefined}) {
+export default function TemporaryDrawer() {
   
   const {open, setOpen} = useContext(DrawerContext);
   const [localUser,setLocalUser] = useState<{name?:string,email?:string} | null>(null)
+  const {categories} = useCategoriesContext();
 
   const fetchUserAndList = async () => {
     const user = localStorage.getItem('24j1i2cj4io-dadxzazd213')
@@ -91,7 +92,7 @@ useEffect(()=>{
 
           </ListItem>
 
-          <Accordion sx={{border:'none',boxShadow:'none',}}>
+          {/* <Accordion sx={{border:'none',boxShadow:'none',}}>
             
             <AccordionSummary
     expandIcon={<AiOutlineArrowUp />}
@@ -151,9 +152,59 @@ key={i}>
 
 
   </AccordionDetails>
-</Accordion>
+</Accordion> */}
 
-<Accordion sx={{border:'none',boxShadow:'none',}}>
+
+{categories && categories[0] && categories[0].cateArray && categories[0]?.cateArray?.map((category:any) => (
+  <Accordion sx={{border:'none',boxShadow:'none'}}>
+    <AccordionSummary
+      expandIcon={<AiOutlineArrowUp />}
+      aria-controls="panel1a-content"
+      id="panel1a-header"
+    >
+      <Typography component='h1' sx={{
+        textTransform:'capitalize',
+        fontWeight:600
+      }}>
+        {category.categoryName}
+      </Typography>
+    </AccordionSummary>
+    <AccordionDetails>
+      <List disablePadding>
+        <ListItem sx={{padding:0,width:'100%'}}
+          onClick={()=>{
+            setOpen(false);
+            router.push(`/${encodeURIComponent(category.categoryName)}/products`)
+          }}
+        >
+          <ListItemButton>
+            <Typography sx={{fontWeight:300}}>
+              View All
+            </Typography>
+          </ListItemButton>
+        </ListItem>
+        {category.subcategories.length > 0 && category.subcategories.map((subcategory:any) => (
+          <ListItem sx={{padding:0,width:'100%'}}
+            onClick={()=>{
+              setOpen(false);
+              router.push(`/${encodeURIComponent(category?.categoryName)}/products?type=${encodeURIComponent(subcategory?.name).toLocaleLowerCase()}`)
+            }}
+            key={subcategory?.id}
+          >
+            <ListItemButton>
+              <Typography sx={{fontWeight:300}}>
+                {subcategory?.name}
+              </Typography>
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </AccordionDetails>
+  </Accordion>
+))}
+
+
+{/* <Accordion sx={{border:'none',boxShadow:'none',}}>
             
             <AccordionSummary
     expandIcon={<AiOutlineArrowUp />}
@@ -215,9 +266,9 @@ key={i}>
 
 
   </AccordionDetails>
-</Accordion>
+</Accordion> */}
 
-{
+{/* {
        [   
         // `Craft Supplies`,
       //  `DIY Kits`,
@@ -241,7 +292,7 @@ key={i}>
     
               </ListItem>
              })
-          }
+          } */}
 
 
 
