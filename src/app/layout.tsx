@@ -11,7 +11,7 @@ export const metadata = {
     title: `Leb North: Your Ultimate Destination for Tech & Communication Solutions in Lebanon`,
     description: `Explore the latest tech gadgets and communication solutions at Leb North, your premier online destination in Lebanon. Discover a diverse range of products from smartphones to networking equipment.`,
     icons: {
-        icon: `https://ucarecdn.com/0f2afae9-efff-4c52-b21d-61b31fb19f75/logopng.jpg`
+        icon: `https://ucarecdn.com/0f2afae9-efff-4c52-b21d-61b31fb19f75/-/resize/300/`
     }
 }
 

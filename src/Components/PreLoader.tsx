@@ -1,25 +1,25 @@
 "use client"
-import React, { useEffect, useState } from 'react'
-import { Box,  Container, Grid, Typography } from "@mui/material"
+import React from 'react'
+import { Box,  Container, Typography } from "@mui/material"
 // import ContactSection from './ContactSection/ContactSection'
 import HomeProductCollection from './HomeProductCollection/HomeProductCollection'
 // import HomeProductsCarousel from './HomeProductsCarousel/HomeProductsCarousel'
 import MainCarousel from './MainCarousel/MainCarousel'
 import { useRouter } from 'next/navigation'
-import Perks from './Perks/Perks'
+// import Perks from './Perks/Perks'
 // import FullscreenPoster from './FullscreenPoster/FullscreenPoster'
-import Testimonials from './Testimonials/Testimonials'
-import Btn from './Btn/Btn'
-import useLanguage from '@/Hooks/useLanguage'
+// import Testimonials from './Testimonials/Testimonials'
+// import Btn from './Btn/Btn'
+// import useLanguage from '@/Hooks/useLanguage'
 import ContactSection from './ContactSection/ContactSection'
-import HomeProductsCarousel from './HomeProductsCarousel/HomeProductsCarousel'
+// import HomeProductsCarousel from './HomeProductsCarousel/HomeProductsCarousel'
 import SMicons from './SMicons/SMicons'
 import { useCategoriesContext } from '@/context/Contexts'
 
 const 
 PreLoader = ({data,resImages}:any) => {
+  console.log('data: ', data);
   const {categories} = useCategoriesContext();
-  console.log('categories: ', categories);
 
   const router= useRouter();
 
@@ -61,7 +61,7 @@ PreLoader = ({data,resImages}:any) => {
   
   return (
     <Box sx={{mt:8}}>
-        <Container sx={{py:8}} className="center">
+        <Container sx={{py:{xs:3,md:8}}} className="center">
           <Typography sx={{fontWeight:800,fontSize:'1.5em'}} className='center text-center'>
             Welcome to Leb North your IT and Technology Partner.
           </Typography>

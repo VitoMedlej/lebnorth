@@ -9,9 +9,9 @@ import { useRouter } from 'next/navigation'
 const HomeProductCollection = ({products} : {products:IProduct[] | never[]}) => {
  const router = useRouter()
   return (
-    <Box sx={{my:4}} className='center auto'>
+    <Box sx={{my:{md:4}}} className='center auto'>
            
-           <Box className="flex justify-between col auto" sx={{px:1,pt:8,pb:4,maxWidth:'lg'}}>
+           <Box className="flex justify-between col auto" sx={{px:1,pt:8,pb:{md:4},maxWidth:'lg'}}>
 
            <Typography className='center  clr text-center' sx={{fontWeight:600,fontSize:'2em'}}>
            Top Featured Products
@@ -39,7 +39,7 @@ onClick={()=>router.push('/collection/products')}
 </Btn>
 </Box>
 
-              <Box sx={{mb:2,mt:4}} className='flex wrap gap1 justify-center'>
+              <Box sx={{mb:2,mt:{md:4}}} className='flex wrap gap1 justify-center'>
                   {products && products?.length > 0 && products.map(i=>{
 
                       return <ProductCard 
